@@ -1,0 +1,48 @@
+primary-color = white
+bg = black
+
+body
+	color: primary-color
+	background-color: bg
+	margin 0
+
+
+.pdfreader
+	position fixed
+	top 0
+	bottom: 0
+	left 0
+	right: 0
+	display: flex
+	flex-flow: column
+
+	&__container
+		overflow: auto
+		display: flex
+		flex: 1
+
+	&__viewer
+		margin: auto
+
+		.page
+			position relative
+
+			.textLayer
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				overflow: hidden
+				opacity: 0.2
+				line-height: 1.0
+
+				span
+					color: transparent
+					position: absolute
+					white-space: pre
+					cursor: text
+					transform-origin: 0% 0%
+
+.root
+	display: flex
